@@ -1,0 +1,22 @@
+[project]
+name = "testfastapi"
+version = "0.1.0"
+description = "A FastAPI web application"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+    "pydantic>=2.0.0",
+    "sqlalchemy>=2.0.0",
+    "asyncpg>=0.28.0",
+    "python-multipart>=0.0.6"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+start = "main:run_server"
+dev = "main:run_dev_server"
